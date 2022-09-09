@@ -1,7 +1,7 @@
 export const SITE = {
-	title: 'Documentation',
+	title: '五合クラウド',
 	description: 'Your website description.',
-	defaultLanguage: 'en_US',
+	defaultLanguage: 'js_JP',
 };
 
 export const OPEN_GRAPH = {
@@ -27,6 +27,7 @@ export type Frontmatter = {
 
 export const KNOWN_LANGUAGES = {
 	English: 'en',
+	Japanese:'jp'
 } as const;
 export const KNOWN_LANGUAGE_CODES = Object.values(KNOWN_LANGUAGES);
 
@@ -46,12 +47,16 @@ export type Sidebar = Record<
 	Record<string, { text: string; link: string }[]>
 >;
 export const SIDEBAR: Sidebar = {
-	en: {
-		'Section Header': [
-			{ text: 'Introduction', link: 'en/introduction' },
-			{ text: '機能一覧', link: 'en/機能一覧' },
-			{ text: 'Page 3', link: 'en/page-3' },
+	en:{},
+	jp: {
+		'メニュー': [
+			{ text: 'はじめに', link: 'jp/1.top' },
+			{ text: '製品サポート', link: 'jp/2.製品サポート' },
+			{ text: '業務情報', link: 'jp/3.業務情報' },
+			{ text: '用語の定義', link: 'jp/4.用語の定義' },
+			{ text: 'APIs', link: 'jp/5.APIs' },
+			{ text: 'FAQ', link: 'jp/99.FAQ' },
 		],
-		'Another Section': [{ text: 'Page 4', link: 'en/page-4' }],
+		'その他': [{ text: 'コミュニティ', link: 'jp/101.コミュニティ' }],
 	},
 };
