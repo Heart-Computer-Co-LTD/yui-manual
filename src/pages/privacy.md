@@ -1,28 +1,24 @@
 ---
 layout: ../layouts/page.astro
-title: Privacy
-description: Our policy regarding information collection and use
+title: 個人情報保護方針
+description: プライバシーポリシー
 publishDate: 2022-08-08T00:00:00.000Z
 coverSVG: ../images/svg/undraw/undraw_privacy_protection.svg
 socialImage: ../images/undraw/undraw_privacy_protection.png
 ---
 
-We are committed to maintaining the trust of visitors to this website. We promise to handle and store your data fairly and legally at all times.
 
-You have the right to view, amend, or delete the personal information that we hold. If you have any questions about what data we collect or how we use it, please let us know by emailing: info@hellotham.com.
+株式会社ハートコンピューター（以下、「当社」といいます。）は、酒造業中心の在庫・売上管理、生産性向上を目的としたシステム・アプリケーションの開発・導入・サポートを行っています。当社が取り扱う個人情報について、適切に取得、利用及び提供を行うため、個人情報の保護に関する法律その他関連法令を遵守するとともに、本個人情報保護方針を定め、個人情報管理体制を確立し、企業として責任ある対応を実現するものとします。
 
-## Personal information that we collect and why we collect it
-
-We do not collect personally identifiable information from you.
-
-### Information collected by others
-
-When you load this website, our hosting provider may collect the following information in the form of server logs:
-
-- Your IP address
-- Date and time of the request for the page load
-- Size of the data package being transmitted within the connection
-- Type and version of your web browser
-- Request information like HTTP method, host name, URI, referrer, etc
-
-This website does not use cookies.
+### 法令、規範の遵守
+当社は、個人情報の取扱いに関する法令、国が定める指針その他の規範を遵守します。そのため、日本産業規格「個人情報保護マネジメントシステム — 要求事項」(JIS Q 15001)に準拠した個人情報保護マネジメントシステムを策定し、適切に運用いたします。
+### 個人情報の安全対策
+当社は、個人情報の正確性及び安全性確保のために、個人情報の漏えい、滅失又はき損の防止及び是正のための適切な措置を講じます。
+### 目的外利用の禁止
+当社は、事業の内容及び規模を考慮した適切な個人情報の取得、利用及び提供を行います。それには特定された利用目的の達成に必要な範囲を超えた個人情報の取扱いを行わないこと及びそのための措置を講じることを含みます。
+### 個人情報取扱の委託
+当社は、個人情報の取扱いの全部又は一部を委託する場合は、その取扱いを委託された個人情報の安全管理が図られるよう、委託を受けた者に対する必要かつ適切な監督を行います。
+### 苦情・相談に対する適切な対応
+当社は、個人情報の取扱いに関する苦情及び相談への適切かつ迅速な対応に努めます。また、当社が保有する保有個人データの開示等の請求等(利用目的の通知、開示、訂正・追加又は削除、利用又は提供の停止）を受け付けます。開示等の求めの手続きにつきましては、「個人情報苦情および相談窓口」までご連絡ください。
+見直し及び改善
+当社は、本個人情報保護方針の内容を適宜見直すとともに、個人情報保護マネジメントシステムの継続的改善に努めます。
