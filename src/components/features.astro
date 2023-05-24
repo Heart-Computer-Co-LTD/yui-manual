@@ -1,32 +1,32 @@
 ---
-import { Icon } from 'astro-icon'
+import { Icon } from "astro-icon";
 
 const features = [
   {
-    name: 'どこからでも利用可能',
+    name: "どこからでも利用可能",
     description:
-      'Webブラウザさえあれば、どこからでも利用可能です。また、スマートフォンやタブレットからも利用できます。',
-    icon: 'sparkles',
+      "Webブラウザさえあれば、どこからでも利用可能です。また、スマートフォンやタブレットからも利用できます。",
+    icon: "sparkles",
   },
   {
-    name: '安全・安心',
+    name: "安全・安心",
     description:
-      'セキュリティに配慮した設計で、データの漏洩や改ざんのリスクを最小限に抑えています。データはクラウド上で管理され災害から守ります。',
-    icon: 'puzzle',
+      "セキュリティに配慮した設計で、データの漏洩や改ざんのリスクを最小限に抑えています。データはクラウド上で管理され災害から守ります。",
+    icon: "puzzle",
   },
   {
-    name: 'まるで従来のデスクトップアプリのような使用感',
+    name: "まるで従来のデスクトップアプリのような使用感",
     description:
-      '従来のデスクトップアプリのような使用感を実現しています。また、データの入力や修正などの操作も、従来のデスクトップアプリと同じように行えます。',
-    icon: 'presentation-chart-bar',
+      "従来のデスクトップアプリのような使用感を実現しています。また、データの入力や修正などの操作も、従来のデスクトップアプリと同じように行えます。",
+    icon: "presentation-chart-bar",
   },
   {
-    name: '帳票にこだわりました',
+    name: "帳票にこだわりました",
     description:
-      '酒税申告書や輸出書類など、酒造業務に必要な帳票を網羅しています。また、帳票の印刷も簡単に行えます。',
-    icon: 'clock',
+      "酒税申告書や輸出書類など、酒造業務に必要な帳票を網羅しています。また、帳票の印刷も簡単に行えます。",
+    icon: "clock",
   },
-]
+];
 ---
 
 <div class="py-12 bg-gray-100 dark:bg-gray-800">
@@ -55,7 +55,7 @@ const features = [
         class="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10"
       >
         {
-          features.map(feature => (
+          features.map((feature) => (
             <div class="relative">
               <dt>
                 <div class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-purple-500 dark:bg-purple-400 text-white dark:text-black">
