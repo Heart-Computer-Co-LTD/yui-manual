@@ -14,12 +14,13 @@ tags:
   - パッキングリスト
   - シッピングマーク
   - 輸出免税酒類輸出明細書
+  - 輸出帳票事前準備
 ---
 ## 目次
  - 概要
  - 業務の流れ
  - システムの使い方 
-### 概要
+## 概要
 直接輸出を行う際に、以下の機能を使用することができます。
 <font size="3">
  - **コマーシャルインボイス**：  
@@ -33,7 +34,7 @@ tags:
  - **輸出免税酒類輸出明細書**：  
 酒類製造者が酒類を外国に輸出する目的で製造場から移出する場合に、酒税が免除されるための手続きの一環として作成する書類です。輸出した酒類の税率の適用区分、数量、輸出の年月日、仕向地、輸出港の所轄税関などの事項を記載します。また、輸出許可証等に基づいて作成されたものであることを証明する必要があります13。令和２年４月１日以後に提出期限が到来する納税申告書より、輸出免税酒類輸出明細書の添付は不要となりましたが、帳簿に必要な事項を記載し、保存する必要があります
 </font>
-### 業務の流れ
+## 業務の流れ
 #### 直接輸出の例
 ```mermaid
 sequenceDiagram
@@ -65,8 +66,8 @@ sequenceDiagram
 | 9    | 輸出者->>税務署          | 免税付表を付けて酒税申告を行う               | 輸出免税酒類輸出明細書                                   |
 </font>
 
-### システムの使い方
-#### サンプルイメージ
+## システムの使い方
+### サンプルイメージ
 import Carousel from '../../components/carousel.astro'
 export const carouselPages = [
   { name: 'Cowarra Dam', image: '../images/gallery/carousel/commercialInvoice.png', title: 'コマーシャルインボイス', description: 'コマーシャルインボイス' },
@@ -76,4 +77,23 @@ export const carouselPages = [
 
 <Carousel pages={carouselPages} />
 
-#### 入力方法
+### 入力方法
+**受注入力**  
+受注入力で、以下の情報を登録します。
+ - 取引：101:輸出売上
+ - 輸出国情報：仕向地、所轄税関
+![image](https://github.com/Heart-Computer-Co-LTD/yui-manual/assets/22786124/878e1563-328c-4165-abfa-2f31405c26b6)
+![image](https://github.com/Heart-Computer-Co-LTD/yui-manual/assets/22786124/13873aa2-6c4a-4fa0-a4b4-61ea097fe512)
+
+
+**輸出帳票事前準備**  
+輸出帳票事前準備で、先ほど登録した受注入力データに詳細な貨物の情報を登録します。
+![image](https://github.com/Heart-Computer-Co-LTD/yui-manual/assets/22786124/ffceef11-3cd3-453a-a8d4-2cb351d7ef42)
+![image](https://github.com/Heart-Computer-Co-LTD/yui-manual/assets/22786124/a5597bb1-d321-4123-83e7-64a585c2df8c)
+![image](https://github.com/Heart-Computer-Co-LTD/yui-manual/assets/22786124/acc7deae-37d6-4f28-a088-2205c15f2301)
+![image](https://github.com/Heart-Computer-Co-LTD/yui-manual/assets/22786124/e2d727a2-5f02-4ea5-ad42-942175732192)
+
+**コマーシャルインボイス,パッキングリスト,シッピングマーク**  
+メニューからコマーシャルインボイス,パッキングリスト,シッピングマークを選択し、実行します。
+![image](https://github.com/Heart-Computer-Co-LTD/yui-manual/assets/22786124/dbf00669-b4ad-4348-bba6-cf7b98906cee)
+![image](https://github.com/Heart-Computer-Co-LTD/yui-manual/assets/22786124/cacf75f7-250b-4553-989d-90dc35bde9f0)
