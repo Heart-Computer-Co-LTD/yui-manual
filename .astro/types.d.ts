@@ -86,9 +86,16 @@ declare module 'astro:content' {
 
 	const entryMap: {
 		"blog": {
-"2023-05-24-輸出の流れ.mdx": {
-  id: "2023-05-24-輸出の流れ.mdx",
-  slug: "2023-05-24-輸出の流れ",
+"2023-05-24-輸出の流れ（直接輸出）.mdx": {
+  id: "2023-05-24-輸出の流れ（直接輸出）.mdx",
+  slug: "2023-05-24-輸出の流れ直接輸出",
+  body: string,
+  collection: "blog",
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".mdx"] },
+"2023-05-26-輸出の流れ（間接輸出）.mdx": {
+  id: "2023-05-26-輸出の流れ（間接輸出）.mdx",
+  slug: "2023-05-26-輸出の流れ間接輸出",
   body: string,
   collection: "blog",
   data: InferEntrySchema<"blog">
