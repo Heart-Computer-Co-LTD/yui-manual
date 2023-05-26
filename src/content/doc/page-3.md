@@ -1,6 +1,6 @@
 ---
 section: 製品サポート
-title: 操作方法
+title: 基本操作（共通）
 description: Lorem ipsum dolor sit amet - 3
 ---
 ### フィルター

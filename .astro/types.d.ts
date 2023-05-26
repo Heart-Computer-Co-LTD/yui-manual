@@ -102,9 +102,30 @@ declare module 'astro:content' {
 } & { render(): Render[".mdx"] },
 },
 "doc": {
+"F0030.md": {
+  id: "F0030.md",
+  slug: "f0030",
+  body: string,
+  collection: "doc",
+  data: InferEntrySchema<"doc">
+} & { render(): Render[".md"] },
 "introduction.md": {
   id: "introduction.md",
   slug: "introduction",
+  body: string,
+  collection: "doc",
+  data: InferEntrySchema<"doc">
+} & { render(): Render[".md"] },
+"page-0.md": {
+  id: "page-0.md",
+  slug: "page-0",
+  body: string,
+  collection: "doc",
+  data: InferEntrySchema<"doc">
+} & { render(): Render[".md"] },
+"page-0030.md": {
+  id: "page-0030.md",
+  slug: "page-0030",
   body: string,
   collection: "doc",
   data: InferEntrySchema<"doc">
@@ -119,13 +140,6 @@ declare module 'astro:content' {
 "page-3.md": {
   id: "page-3.md",
   slug: "page-3",
-  body: string,
-  collection: "doc",
-  data: InferEntrySchema<"doc">
-} & { render(): Render[".md"] },
-"page-4.md": {
-  id: "page-4.md",
-  slug: "page-4",
   body: string,
   collection: "doc",
   data: InferEntrySchema<"doc">

@@ -144,10 +144,12 @@ export const COMMUNITY_INVITE_URL = `https://astro.build/chat`
 export type Sidebar = Record<string, { text: string; link: string }[]>
 
 export const SIDEBAR: Sidebar = {
+  '初期設定': [{ text: 'ブラウザ設定', link: 'doc/page-0' }],
   '製品サポート': [
     { text: '用語の定義', link: 'doc/introduction' },
     { text: '機能一覧', link: 'doc/page-2' },
-    { text: '操作方法', link: 'doc/page-3' },
+    { text: '基本操作（共通）', link: 'doc/page-3' },
+    { text: '基本操作（受注入力）', link: 'doc/page-0030' },
   ],
-  '初期設定': [{ text: 'ブラウザ設定', link: 'doc/page-4' }],
+
 }
