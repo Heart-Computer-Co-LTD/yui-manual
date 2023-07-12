@@ -150,6 +150,7 @@ export const SIDEBAR: Sidebar = {
     { text: '機能一覧', link: 'doc/page-2' },
     { text: '基本操作（共通）', link: 'doc/page-3' },
     { text: '基本操作（受注入力）', link: 'doc/page-0030' },
+    { text: '基本操作（商品マスタ）', link: 'doc/page-1060' },
   ],
 
 }
