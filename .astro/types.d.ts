@@ -144,6 +144,13 @@ declare module 'astro:content' {
   collection: "doc",
   data: InferEntrySchema<"doc">
 } & { render(): Render[".md"] },
+"page-4-master.md": {
+  id: "page-4-master.md",
+  slug: "page-4-master",
+  body: string,
+  collection: "doc",
+  data: InferEntrySchema<"doc">
+} & { render(): Render[".md"] },
 },
 
 	};

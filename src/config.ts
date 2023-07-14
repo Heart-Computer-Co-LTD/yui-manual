@@ -149,8 +149,9 @@ export const SIDEBAR: Sidebar = {
     { text: '用語の定義', link: 'doc/introduction' },
     { text: '機能一覧', link: 'doc/page-2' },
     { text: '基本操作（共通）', link: 'doc/page-3' },
-    { text: '基本操作（受注入力）', link: 'doc/page-0030' },
-    { text: '基本操作（商品マスタ）', link: 'doc/page-1060' },
+    { text: 'マスタメンテナンス', link: 'doc/page-4-master'},
+    { text: '受注入力', link: 'doc/page-0030' },
+    { text: '商品マスタ', link: 'doc/page-1060' },
   ],
 
 }
