@@ -79,6 +79,7 @@ export const DefaultImage = '../images/undraw/undraw_my_feed.png'
 export const NavigationLinks = [
   { name: 'はじめに', href: '' },
   { name: '業務情報', href: 'blog' },
+  { name: '価格', href: 'price' },
   { name: '製品サポート', href: 'doc/introduction' },
 ]
 

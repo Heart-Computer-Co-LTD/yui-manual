@@ -8,8 +8,7 @@ description: Lorem ipsum dolor sit amet - 4
 帳票を適切な文字サイズで表示するために以下の手順に従って設定を行います。使用するブラウザによって設定箇所が異なります。
 
 ##### Chromeの場合
-
-- アドレスバーに ``chrome://settings/fonts``を貼り付ける。
+- アドレスバーに  ``` chrome://settings/fonts ```  を貼り付ける。
 - 最小フォントサイズを下限値にする。
 
 ![image](https://user-images.githubusercontent.com/22786124/212241939-9c30713f-d713-4743-8836-b855eb87793c.png)
