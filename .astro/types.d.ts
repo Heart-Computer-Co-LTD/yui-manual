@@ -151,6 +151,13 @@ declare module 'astro:content' {
   collection: "doc",
   data: InferEntrySchema<"doc">
 } & { render(): Render[".mdx"] },
+"page-5-input.mdx": {
+  id: "page-5-input.mdx",
+  slug: "page-5-input",
+  body: string,
+  collection: "doc",
+  data: InferEntrySchema<"doc">
+} & { render(): Render[".mdx"] },
 },
 
 	};

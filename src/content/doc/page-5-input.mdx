@@ -1,0 +1,114 @@
+---
+section: 製品サポート
+title: 基本操作（入力画面）
+description: Lorem ipsum dolor sit amet - 3
+---
+
+受注や詰口を登録する方法です。 ここでは受注入力を例にして説明しますが、どの入力画面も基本的な操作は同様です。
+
+## 画面遷移図(リスト画面から)
+リスト画面からの画面遷移図です。参照・登録・修正・複写の各画面に遷移できます。
+```plantuml
+@startuml
+skinparam monochrome false
+
+title 画面遷移図(リスト画面から)
+
+
+state リスト画面
+state 登録画面
+state 参照画面
+state 修正画面
+state 複写画面
+
+[*] --> リスト画面: メニュー選択
+リスト画面 --> 参照画面: 参照（F1）
+リスト画面 --> 登録画面: 登録（F2）
+リスト画面 --> 修正画面: 修正（F3）
+リスト画面 --> 複写画面: 複写（F12）
+参照画面 --> 削除確認: 削除（F4）
+@enduml
+```
+### リスト画面
+登録済みの情報を一覧表示します。 一覧の表示項目は、各入力画面によって異なります。CSVやExcelに出力することができます。  
+開始日と終了日の初期値は処理日です。開始日と終了日を指定することで、期間を指定して検索することができます。
+![image](https://github.com/Heart-Computer-Co-LTD/yui-manual/assets/22786124/73fe42f8-cb42-45fc-912c-b06c03fb34b3)
+
+### 参照画面
+登録済みの入力情報を参照します。 参照画面は、登録画面と同じ画面です。修正ができないようになっています。
+前後や先頭末尾のレコードを参照することができます。削除ができるようになっています。
+![image](https://github.com/Heart-Computer-Co-LTD/yui-manual/assets/22786124/9282dfc4-5311-4aeb-bc1d-605e444f1f54)
+
+### 登録画面
+新規に入力情報を登録します。 登録画面は、参照画面と同じ画面ですが、削除ができないようになっています。
+![image](https://github.com/Heart-Computer-Co-LTD/yui-manual/assets/22786124/5d94d709-2fe8-48bf-a99b-4d77bfd63492)
+
+### 修正画面
+登録済みの入力情報を修正します。 修正画面は、参照画面と同じ画面ですが、削除ができないようになっています。
+![image](https://github.com/Heart-Computer-Co-LTD/yui-manual/assets/22786124/244c2fda-cca5-45b7-bc42-681b0c0f371b)
+
+### 複写画面
+登録済みの入力情報を複写し新規に登録します。 複写画面は、参照画面と同じ画面ですが、削除ができないようになっています。
+![image](https://github.com/Heart-Computer-Co-LTD/yui-manual/assets/22786124/eed9ba3c-17c3-4f60-a03f-018bdf3b2698)
+
+### 行挿入・行削除
+行挿入・行削除を行う場合は、明細行を選択してから行挿入・行削除をクリックします。  
+ファンクションキーでも行挿入・行削除を行うことができます。
+
+### 付加情報
+明細行を選択してから付加情報をクリックすると、付加情報を確認することができます。  
+ファンクションキーでも付加情報を確認することができます。
+![image](https://github.com/Heart-Computer-Co-LTD/yui-manual/assets/22786124/161bc190-81a4-40ee-b106-0c3942be9898)
+
+### 構成商品
+明細行を選択してから構成商品をクリックすると、構成商品を確認することができます。
+ファンクションキーでも構成商品を確認することができます。
+![image](https://github.com/Heart-Computer-Co-LTD/yui-manual/assets/22786124/3dcdb409-16b9-4e71-8105-027dd1f50e09)
+
+## 画面遷移図(参照画面から)
+参照画面からの画面遷移図です。登録・修正・複写・削除の各画面に遷移できます。
+
+```plantuml
+@startuml
+skinparam monochrome false
+
+title 画面遷移図(参照画面から)
+
+
+state リスト画面
+state 登録画面
+state 参照画面
+state 修正画面
+state 複写画面
+
+リスト画面 --> 参照画面: 参照（F1）
+参照画面 --> 登録画面: 登録（F2）
+参照画面 --> 修正画面: 修正（F3）
+参照画面 --> 複写画面: 複写（F12）
+参照画面 --> 削除確認: 削除（F4）
+@enduml
+```
+
+## 画面遷移図（連続登録）
+登録画面からの画面遷移図です。確定後に連続登録ができます。
+修正や複写、削除の場合も同様です。
+```plantuml
+@startuml
+skinparam monochrome false
+
+title 画面遷移図(登録画面から)
+
+
+state リスト画面
+state 登録画面
+
+
+リスト画面 --> 登録画面: 登録（F2）
+登録画面 --> 登録画面: 登録を続けますか？>OK
+@enduml
+```
+
+## コード検索
+登録や修正の際に、コードを入力する場合は、コード検索を利用することができます。
+コード検索は、コードの入力欄にカーソルを合わせて、F5キーを押すことで表示されます。  
+![image](https://github.com/Heart-Computer-Co-LTD/yui-manual/assets/22786124/28cba769-9730-43fa-8f5c-fad521a870f7)
