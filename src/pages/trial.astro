@@ -15,7 +15,10 @@ const frontmatter = {
 <Base frontmatter={frontmatter}>
   <body>
     <main>
-      <div class="bg-white py-24 sm:py-32">
+      <div 
+        x-data="{ isLoading: false }"  
+        class="bg-white py-24 sm:py-32"
+      >
         <div class="mx-auto max-w-7xl px-6 lg:px-8">
           <div class="lg:text-center">
             <h2
@@ -50,7 +53,10 @@ const frontmatter = {
                     x-data="{tsnm:'',tnnm:'',tel:'',mail:''}"
                     class="lg:text-left"
                   >
-                    <form id="form">
+                    <form 
+                      id="form"
+                      x-on:submit.prevent="isLoading = true"
+                      >
                       <div class="space-y-12">
                         <div class="border-b border-gray-900/10 pb-12">
                           <div
@@ -215,10 +221,17 @@ const frontmatter = {
                                   >キャンセル</button
                                 >
                                 <button
+                                  x-show="isLoading == false"
                                   name="submit"
                                   type="submit"
                                   class="clicked-submit rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                                   >申し込む</button
+                                >
+                                <!-- 送信中のボタンー -->
+                                <button
+                                  x-show="isLoading == true"
+                                  class="clicked-submit rounded-md bg-indigo-500 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500"
+                                  >送信中...</button
                                 >
                               </div>
                             </div>
