@@ -50,7 +50,7 @@ const frontmatter = {
                     x-data="{tsnm:'',tnnm:'',tel:'',mail:''}"
                     class="lg:text-left"
                   >
-                    <form>
+                    <form id="form">
                       <div class="space-y-12">
                         <div class="border-b border-gray-900/10 pb-12">
                           <div
@@ -58,14 +58,14 @@ const frontmatter = {
                           >
                             <div class="sm:col-span-4">
                               <label
-                                for="organization"
+                                for="tsnm"
                                 class="block text-sm font-medium leading-6 text-gray-900"
                                 >貴社名
                                 <div class="mt-2">
                                   <input
                                     type="text"
-                                    name="organization"
-                                    id="organization"
+                                    name="tsnm"
+                                    id="tsnm"
                                     autocomplete="organization"
                                     placeholder="例）株式会社ハート酒造"
                                     required
@@ -235,61 +235,41 @@ const frontmatter = {
       </div>
     </main>
     <script>
-      // ページ内から`alert`クラスを持つすべてのボタンを探す。
-      const buttons = document.querySelectorAll("button.clicked-submit");
-      const inputs = document.querySelectorAll("input.input");
-      const organization = document.querySelectorAll("input[name='organization']");
-      const tnnm = document.querySelectorAll("input[name='tnnm']");
-      const tel = document.querySelectorAll("input[name='tel']");
-      const mail = document.querySelectorAll("input[name='mail']");
-      const kiyaku = document.querySelectorAll("input[name='kiyaku']");
-      const privacy = document.querySelectorAll("input[name='privacy']");
       const apiurl =
         "https://prod-19.japanwest.logic.azure.com:443/workflows/c93144ae154c42cea621a5eb9d3b5e5a/triggers/manual/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=CbtTJZ6uG8K9yFleksUFQFa_dogEIp2yCLw_Y89o05o";
-      let i = 0;
 
-      // ボタンがクリックされたときのハンドリング
-      buttons.forEach((button) => {
-        button.addEventListener("click", () => {
-          inputs.forEach((input) => {
-            if (
-              input.value === "" ||
-              organization[0].value === "" ||
-              tnnm[0].value === "" ||
-              tel[0].value === "" ||
-              mail[0].value === "" ||
-              kiyaku[0].checked === false ||
-              privacy[0].checked === false
-            ) {
-              i++;
-            }
+      const form = document.getElementById('form'); 
+      // var elmButton = document.getElementById('button.submit');
+
+      
+      form.addEventListener('submit', event => {
+        // イベントを停止する
+        event.preventDefault();
+
+        // elmButton.disabled = true;
+        // elmButton.value='送信中...';
+
+        const formData = new FormData(form);
+        const data = Object.fromEntries(formData.entries());
+
+        console.log(data);
+        postData(apiurl, data)
+          .then((res) => {
+            console.log(res); // `data.json()` の呼び出しで解釈された JSON データ
+            alert(JSON.stringify(res));
+          })
+          .catch((error) => {
+            console.log(error.message); // エラーが発生した場合は、エラーを処理する
+          })
+          .finally(() => {
+            // リクエストが完了した後に実行する処理
+            // alert("申し込みが完了しました。");
+            location.href="/trialcomplete";
           });
-          if (i >= 1) {
-            console.log("入力されていない項目があります。");
-            i = 0;
-          } else {
-            let data = {
-              tsnm: organization[0].value,
-              tnnm: tnnm[0].value,
-              tel: tel[0].value,
-              mail: mail[0].value,
-              kiyaku: kiyaku[0].checked,
-              privacy: privacy[0].checked,
-            };
-            console.log(data);
-            postData(apiurl, data)
-              .then((data) => {
-                console.log(data); // `data.json()` の呼び出しで解釈された JSON データ
-              })
-              .catch((error) => {
-                console.log(error.message); // エラーが発生した場合は、エラーを処理する
-              })
-              .finally(() => {
-                // リクエストが完了した後に実行する処理
-                alert("申し込みが完了しました。");
-              });
-          }
-        });
+
+        // 改めてsubmitする
+        form.submit();
+        // elmButton.disabled = false;
       });
 
       // POST メソッドの実装の例
