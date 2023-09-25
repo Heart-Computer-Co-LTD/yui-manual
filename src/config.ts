@@ -10,7 +10,7 @@ export interface TagType {
 }
 
 export const SiteMetadata = {
-  title: 'マニュアル',
+  title: '酉-SUBARU',
   description: 'An Astro starter for corporate/marketing/blog websites.',
   author: {
     name: 'Chris Tham',
@@ -70,7 +70,7 @@ export const SiteMetadata = {
   buildTime: new Date(),
 }
 
-export const Logo = '../images/svg/astro/logomark-light.svg'
+export const Logo = '../images/svg/astro/logomark-light.png'
 export const LogoImage = '../images/astro/full-logo-light.png'
 export const FeaturedSVG = '../images/svg/undraw/undraw_design_inspiration.svg'
 export const DefaultSVG = '../images/svg/undraw/undraw_my_feed.svg'
