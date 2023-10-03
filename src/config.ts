@@ -81,6 +81,7 @@ export const NavigationLinks = [
   { name: '業務情報', href: 'blog' },
   { name: '価格', href: 'price' },
   { name: '製品サポート', href: 'doc/page-0' },
+  { name: 'お問合わせ', href: 'contact' },
 ]
 
 export const CategoryDetail = [
