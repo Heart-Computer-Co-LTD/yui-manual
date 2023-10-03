@@ -15,10 +15,7 @@ const frontmatter = {
 <Base frontmatter={frontmatter}>
   <body>
     <main>
-      <div 
-        x-data="{ isLoading: false }"  
-        class="bg-white py-24 sm:py-32"
-      >
+      <div x-data="{ isLoading: false }" class="bg-white py-24 sm:py-32">
         <div class="mx-auto max-w-7xl px-6 lg:px-8">
           <div class="lg:text-center">
             <h2
@@ -53,10 +50,7 @@ const frontmatter = {
                     x-data="{tsnm:'',tnnm:'',tel:'',mail:''}"
                     class="lg:text-left"
                   >
-                    <form 
-                      id="form"
-                      x-on:submit.prevent="isLoading = true"
-                      >
+                    <form id="form" x-on:submit.prevent="isLoading = true">
                       <div class="space-y-12">
                         <div class="border-b border-gray-900/10 pb-12">
                           <div
@@ -142,74 +136,72 @@ const frontmatter = {
                                   </div>
                                 </div>
 
-                                <div class="border-b border-gray-900/10 pb-12"></div>
-                                  <h2
-                                    class="mt-4 text-base font-semibold leading-7 text-gray-900"
-                                  >
-                                    同意事項
-                                  </h2>
-                                  <p
-                                    class="mt-1 text-sm leading-6 text-gray-600"
-                                  >
-                                    以下の事項に同意していただく必要があります。
-                                  </p>
+                                <div class="border-b border-gray-900/10 pb-12">
+                                </div>
+                                <h2
+                                  class="mt-4 text-base font-semibold leading-7 text-gray-900"
+                                >
+                                  同意事項
+                                </h2>
+                                <p class="mt-1 text-sm leading-6 text-gray-600">
+                                  以下の事項に同意していただく必要があります。
+                                </p>
 
-                                  <div class="mt-2 space-y-10">
-                                    <fieldset>
-                                      <div class="mt-6 space-y-6">
-                                        <div class="relative flex gap-x-3">
-                                          <div class="flex h-6 items-center">
-                                            <input
-                                              id="kiyaku"
-                                              name="kiyaku"
-                                              type="checkbox"
-                                              required
-                                              value="1"
-                                              class="input h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
-                                            />
-                                          </div>
-                                          <div class="text-sm leading-6">
-                                            <label
-                                              for="kiyaku"
-                                              class="font-medium text-gray-900"
-                                              >利用規約に同意しました。</label
-                                            >
-                                            <p class="text-gray-500 underline">
-                                              <a href="#" target="_blank"
-                                                >利用規約</a
-                                              >
-                                            </p>
-                                          </div>
+                                <div class="mt-2 space-y-10">
+                                  <fieldset>
+                                    <div class="mt-6 space-y-6">
+                                      <div class="relative flex gap-x-3">
+                                        <div class="flex h-6 items-center">
+                                          <input
+                                            id="kiyaku"
+                                            name="kiyaku"
+                                            type="checkbox"
+                                            required
+                                            value="1"
+                                            class="input h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
+                                          />
                                         </div>
-                                        <div class="relative flex gap-x-3">
-                                          <div class="flex h-6 items-center">
-                                            <input
-                                              id="privacy"
-                                              name="privacy"
-                                              type="checkbox"
-                                              required
-                                              class="input h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
-                                            />
-                                          </div>
-                                          <div class="text-sm leading-6">
-                                            <label
-                                              for="privacy"
-                                              class="font-medium text-gray-900"
-                                              >プライバシーポリシーに同意しました。</label
+                                        <div class="text-sm leading-6">
+                                          <label
+                                            for="kiyaku"
+                                            class="font-medium text-gray-900"
+                                            >利用規約に同意しました。</label
+                                          >
+                                          <p class="text-gray-500 underline">
+                                            <a href="#" target="_blank"
+                                              >利用規約</a
                                             >
-                                            <p class="text-gray-500 underline">
-                                              <a
-                                                href="https://www.heart.co.jp/privacy-policy/"
-                                                target="_blank"
-                                                >プライバシーポリシー</a
-                                              >
-                                            </p>
-                                          </div>
+                                          </p>
                                         </div>
                                       </div>
-                                    </fieldset>
-                                  </div>
-
+                                      <div class="relative flex gap-x-3">
+                                        <div class="flex h-6 items-center">
+                                          <input
+                                            id="privacy"
+                                            name="privacy"
+                                            type="checkbox"
+                                            required
+                                            class="input h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
+                                          />
+                                        </div>
+                                        <div class="text-sm leading-6">
+                                          <label
+                                            for="privacy"
+                                            class="font-medium text-gray-900"
+                                            >プライバシーポリシーに同意しました。</label
+                                          >
+                                          <p class="text-gray-500 underline">
+                                            <a
+                                              href="https://www.heart.co.jp/privacy-policy/"
+                                              target="_blank"
+                                              >プライバシーポリシー</a
+                                            >
+                                          </p>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </fieldset>
+                                </div>
                               </div>
 
                               <div
@@ -251,11 +243,10 @@ const frontmatter = {
       const apiurl =
         "https://prod-19.japanwest.logic.azure.com:443/workflows/c93144ae154c42cea621a5eb9d3b5e5a/triggers/manual/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=CbtTJZ6uG8K9yFleksUFQFa_dogEIp2yCLw_Y89o05o";
 
-      const form = document.getElementById('form'); 
+      const form = document.getElementById("form");
       // var elmButton = document.getElementById('button.submit');
 
-      
-      form.addEventListener('submit', event => {
+      form.addEventListener("submit", (event) => {
         // イベントを停止する
         event.preventDefault();
 
@@ -277,7 +268,7 @@ const frontmatter = {
           .finally(() => {
             // リクエストが完了した後に実行する処理
             // alert("申し込みが完了しました。");
-            location.href="/trialcomplete";
+            location.href = "/trialcomplete";
           });
 
         // 改めてsubmitする
