@@ -39,13 +39,12 @@ const frontmatter = {
           >
             ご利用料金
           </p>
-          <p
+          <div
             class="mt-4 max-w-2xl text-xl text-gray-600 dark:text-gray-300 lg:mx-auto"
           >
-          お支払いいただく費用は月払いと年払いから選択できます。
-          <br>
-          オプションをご契約の場合は、基本料金にオプション利用料が加算されます。
-          </p>
+            <p>契約は１年間有効です。</p>
+            <p>一括払いか月々払いか、お好きな方をお選びください。</p>
+          </div>
         </div>
       </div>
       <div class="mt-16 lg:text-center">
@@ -63,7 +62,7 @@ const frontmatter = {
             >
             </div>
           </div>
-          <span x-text="on ? '年払い' : '月払い'" class="ml-2 text-lg"></span>
+          <span x-text="on ? '一括払い' : '月々払い'" class="ml-2 text-lg"></span>
         </div>
       </div>
       <div
@@ -220,6 +219,11 @@ const frontmatter = {
           <h3 class="text-2xl font-semibold leading-7 text-gray-900">
             オプション
           </h3>
+          <p
+            class="mt-4 max-w-2xl text-sm text-gray-600 dark:text-gray-300 text-left"
+          >
+          オプションをご契約の場合は、基本料金にオプション利用料が加算されます。
+          </p>
         </div>
         <div class="mt-6 border-t border-gray-100">
           <dl class="divide-y divide-gray-100">
