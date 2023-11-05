@@ -80,6 +80,7 @@ export const NavigationLinks = [
   { name: 'はじめに', href: '' },
   { name: '業務情報', href: 'blog' },
   { name: '価格', href: 'price' },
+  { name: 'APIs', href: 'apis' },
   { name: '製品サポート', href: 'doc/page-0' },
   { name: 'お問合わせ', href: 'contact' },
 ]
