@@ -1,0 +1,85 @@
+---
+title: WebAPIによるデータ活用（Google Sheets編）
+description: Google Sheetsから酉-SUBARUのデータをリアルタイムに取り出します。
+author: ハートコンピューター企画販売部
+publishDate: 2023-05-24T00:00:00.000Z
+coverSVG: ../images/svg/undraw/googlesheetsToApi.jpeg
+socialImage: ../images/svg/undraw/googlesheetsToApi.jpeg
+categories:
+  - データ利活用
+tags:
+  - 五合
+  - WebAPI
+  - 販売管理
+---
+
+### はじめに
+#### WebAPIによるデータ利活用のビジネスへの影響
+
+ - **効率性と精度の向上**  
+WebAPIによる自動化は手動プロセスよりも速く、エラーの少ないデータ処理を実現します。これにより、時間の節約とデータの信頼性が高まります。
+
+ - **コスト削減とリアルタイム分析**  
+WebAPIによる自動化は人件費を減らし、リアルタイムのデータアクセスによってタイムリーな意思決定を促進します。
+
+### WebAPIとGoogle Sheetsの基本
+ - **WebAPIとは**  
+ Web API（Web Application Programming Interface）は、異なるソフトウェア間で情報を交換し、機能を相互に利用するための仕組みです。Web上でのサービスやリソースへのアクセスを提供するため、HTTPプロトコルを使用してコミュニケーションを行います。 
+
+ - **GoogleSheetsとは**  
+ Google Sheetsは、Googleが提供する無料のオンラインスプレッドシートプログラムです。Google Drive内に統合されており、Microsoft Excelのような機能を持つテーブル計算アプリケーションとして動作しますが、クラウドベースであるため、インターネット接続があればどこからでもアクセスできるのが特徴です。
+
+### 「酉-SUBARU」Web APIの基本的な使い方
+- 「酉-SUBARU」Web APIの安全な利用方法とAPIキーの取得方法  
+APIドキュメントの
+<a href="https://apidog.com/apidoc/project-391823/doc-381115" target="_blank" rel="noopener noreferrer">こちら</a>
+をご確認ください。
+
+
+### Google Sheetsでのデータ取り込み準備
+1.拡張機能>アドオン>アドオンを取得
+![image](https://github.com/Heart-Computer-Co-LTD/yui-manual/assets/22786124/a9f64e89-6b87-4ca6-9b0d-3af7bed7abd1)
+2.[REST API Connector](https://workspace.google.com/marketplace/app/rest_api_connector/399246388987)>をインストール
+![image](https://github.com/Heart-Computer-Co-LTD/yui-manual/assets/22786124/d495cf71-ae2f-4d3d-b5a7-6533b2e4834e)
+<font size="2">
+- **REST API Connectorとは** 
+REST API Connectorは、コードを一行も書かずに**Google Sheets**にAPIから直接データを取り込むためのアドオンです。このアドオンは直感的なインターフェースを提供し、データのインポートと表示、リクエストのテストと設定の保存が可能です。
+
+- 主な特徴  
+  - **APIデータの簡単なインポート**：Google SheetsのワークシートにAPIデータを簡単に取り込むことができます。 
+  - **リクエスト/クエリの保存**：コードを書くことなく、作成したリクエストを保存し、後で使用するために自動化や異なるリクエストを連鎖させることができます。
+  - **リクエスト/クエリのトリガーの作成**：リクエストをスケジュールし、インポートを自動化し、リクエストやクエリを連鎖させることができます。時間、日、週、月ごとのインポートやデータの更新のためのトリガーを作成することが可能です。
+</font>
+### 「酉-SUBARU」からのデータの取得とGoogle Sheetsへの反映
+**1.拡張機能>REST|API Connector>Create New Requestを選択する。**
+![image](https://github.com/Heart-Computer-Co-LTD/yui-manual/assets/22786124/30e2392c-0cdc-40be-bcc1-683f6d5038f8)
+**2.APIドキュメントを参考に、リクエストURLをコピーする。**  
+APIドキュメント>デバッグ>送信>Response>実際のReqest>
+![image](https://github.com/Heart-Computer-Co-LTD/yui-manual/assets/22786124/250f55d5-c570-436a-9501-678157f52f8c)
+**3.GoogleSheetsに戻り、リクエストURLを貼り付ける。**
+![image](https://github.com/Heart-Computer-Co-LTD/yui-manual/assets/22786124/5d2f20bd-4d27-4ca2-a286-63ac00ac330c)
+**4.リクエストヘッダーを設定する。**   
+上記画像にある、`x-api-key`と`scrurl`を設定する。  
+`x-api-key`に設定する値については、APIドキュメントの
+<a href="https://apidog.com/apidoc/project-391823/doc-381115" target="_blank" rel="noopener noreferrer">こちら</a>
+をご確認ください。 
+
+**5.リクエストを送信する。**  
+取得したデータを反映するシートを選択し、ボタン「Test」を押してください。
+![image](https://github.com/Heart-Computer-Co-LTD/yui-manual/assets/22786124/f3e66ab7-6120-4e99-b8a3-364e10613cca)
+
+**6.結果（レスポンス）を確認する。**  
+⚠️反映されない場合は、開始日(sday)、終了日(eday)のパラメータを確認して、その範囲にデータが存在することを確認してください。
+![image](https://github.com/Heart-Computer-Co-LTD/yui-manual/assets/22786124/5f9ff26d-fe1f-49fd-b371-03b0d9f32f29)
+
+### まとめ
+WebAPIは、異なるソフトウェア間で情報を交換し、機能を利用するためのインターフェースであり、HTTPプロトコルを通じてWebサービスやリソースへのアクセスを可能にします。  
+一方、Google Sheetsは、クラウドベースのスプレッドシートツールであり、インターネットがあればどこからでもアクセスできるという特徴を持っています。これら二つを組み合わせることで、プログラミングの知識がなくても、APIから直接データを取り込み、処理することができるようになります。これにより、データ駆動型の意思決定を支援し、ビジネスの効率化を促進します。
+
+### 参考資料
+- [「酉-SUBARU」Web APIの公式ドキュメント](https://apidog.com/apidoc/project-391823)
+- [デREST API Connector](https://restapiconnector.dev-worthy.com/)
+
+### ご意見ご感想
+皆様がこの情報をお読みいただき、時間を割いてくださったことに心から感謝申し上げます。私たちは、提供する内容が皆様の期待に応え、有益な情報源となることを目指しています。もし可能であれば、皆様の率直なご意見や感想をお聞かせください。皆様からの一つ一つのフィードバックが、私たちのサービスをより良くするための貴重な指標となります。ご協力いただけますと幸いです。今後ともどうぞ宜しくお願い致します。  
+[入力フォームへ](#)

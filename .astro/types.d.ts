@@ -100,6 +100,13 @@ declare module 'astro:content' {
   collection: "blog",
   data: InferEntrySchema<"blog">
 } & { render(): Render[".mdx"] },
+"2023−11−08-GoogleSheetsとWebAPIの連携によるデータ活用.mdx": {
+  id: "2023−11−08-GoogleSheetsとWebAPIの連携によるデータ活用.mdx",
+  slug: "20231108-googlesheetsとwebapiの連携によるデータ活用",
+  body: string,
+  collection: "blog",
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".mdx"] },
 },
 "doc": {
 "page-0.md": {
