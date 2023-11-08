@@ -1,0 +1,112 @@
+---
+title: WebAPIによるデータ活用（ExcelOnline編）
+description: ExcelOnlineOnlineを使って酉-SUBARUのデータをリアルタイムに取り出します。
+author: ハートコンピューター企画販売部
+publishDate: 2023-05-24T00:00:00.000Z
+coverSVG: ../images/svg/undraw/ExcelOnlineToApi.jpeg
+socialImage: ../images/svg/undraw/ExcelOnlineToApi.jpeg
+categories:
+  - データ利活用
+tags:
+  - 五合
+  - WebAPI
+  - 販売管理
+  - ExcelOnline
+---
+
+### はじめに
+#### WebAPIによるデータ利活用のビジネスへの影響
+
+ - **効率性と精度の向上**  
+WebAPIによる自動化は手動プロセスよりも速く、エラーの少ないデータ処理を実現します。これにより、時間の節約とデータの信頼性が高まります。
+
+ - **コスト削減とリアルタイム分析**  
+WebAPIによる自動化は人件費を減らし、リアルタイムのデータアクセスによってタイムリーな意思決定を促進します。
+
+### WebAPIとExcelOnlineの基本
+ - **WebAPIとは**  
+ Web API（Web Application Programming Interface）は、異なるソフトウェア間で情報を交換し、機能を相互に利用するための仕組みです。Web上でのサービスやリソースへのアクセスを提供するため、HTTPプロトコルを使用してコミュニケーションを行います。 
+
+ - **ExcelOnlineとは**  
+ Excel Online（現在はMicrosoft 365の一部として「Excel for the web」とも呼ばれています）は、Microsoftが提供するクラウドベースのスプレッドシートサービスです。これは、Microsoft Excelのデスクトップバージョンと非常に似たインターフェースと機能をウェブブラウザ上で提供し、ユーザーがインターネット接続さえあれば、どこからでもExcelのドキュメントにアクセスし、編集することができるようにします。
+
+### 酉-SUBARU Web APIの基本的な使い方
+- 酉-SUBARU Web APIの安全な利用方法とAPIキーの取得方法  
+APIドキュメントの
+<a href="https://apidog.com/apidoc/project-391823/doc-381115" target="_blank" rel="noopener noreferrer">こちら</a>
+をご確認ください。
+
+### 酉-SUBARUからのデータの取得とExcelOnlineへの反映
+**1.タブ「データ」＞データの取得（Webから）を選択する。**
+![image](https://github.com/Heart-Computer-Co-LTD/yui-manual/assets/22786124/340293ce-5ce0-4435-afff-69d5fb0627d6)
+
+**2.APIドキュメントを参考に、リクエストURLをコピーする。**  
+APIドキュメント>デバッグ>送信>Response>実際のReqest>
+![image](https://github.com/Heart-Computer-Co-LTD/yui-manual/assets/22786124/250f55d5-c570-436a-9501-678157f52f8c)
+**3.Exelに戻り、リクエストURLを貼り付ける。**
+![image](https://github.com/Heart-Computer-Co-LTD/yui-manual/assets/22786124/fecdd969-a96d-48c9-aa8a-ff3e33d07a7c)
+**4.リクエストヘッダーを設定する。**   
+上記画像にある、`x-api-key`と`scrurl`を設定する。  
+`x-api-key`に設定する値については、APIドキュメントの
+<a href="https://apidog.com/apidoc/project-391823/doc-381115" target="_blank" rel="noopener noreferrer">こちら</a>
+をご確認ください。  
+![image](https://github.com/Heart-Computer-Co-LTD/yui-manual/assets/22786124/a03bb95f-6684-43a1-8da3-12afa27ee5cc)
+**5.PowerQuery＞テーブルへの変換を選択する。**
+![image](https://github.com/Heart-Computer-Co-LTD/yui-manual/assets/22786124/f41a1a16-7c3f-47ce-b4ea-e8668217a588)
+**6.下図の箇所で”新しい行に展開する”を押す。**
+![image](https://github.com/Heart-Computer-Co-LTD/yui-manual/assets/22786124/60c3b9c8-2ede-4c96-8c47-ff499fd1636c)
+**7.再度、下図の箇所でボタンを押し、表示されたダイアログのボタン「OK」を押す**
+![image](https://github.com/Heart-Computer-Co-LTD/yui-manual/assets/22786124/5198f63c-8b52-410c-aedd-6b58091bd264)
+**8.ボタン「閉じて読み込む」を押す。**
+![image](https://github.com/Heart-Computer-Co-LTD/yui-manual/assets/22786124/50033d44-00bb-4755-8316-9612a4cd990d)
+**9.シートにデータが表示されれば成功です。**  
+⚠️反映されない場合は、開始日(sday)、終了日(eday)のパラメータを確認して、その範囲にデータが存在することを確認してください。
+![image](https://github.com/Heart-Computer-Co-LTD/yui-manual/assets/22786124/8663d353-261e-4f2a-b4f2-950a10f79193)
+
+**10.グラフを作成します。**
+![image](https://github.com/Heart-Computer-Co-LTD/yui-manual/assets/22786124/2c423fbb-347e-406b-8e03-f006b60c8090)
+
+**11.ExcelOnlineからブックを開く＞ファイル＞共有＞埋め込みを選択する。**
+![image](https://github.com/Heart-Computer-Co-LTD/yui-manual/assets/22786124/8111ee04-e005-4a4a-9bf4-f4409826004a)
+グラフを公開することで、可視化されたデータをいつでも簡単にチェックすることができます。
+![image](https://github.com/Heart-Computer-Co-LTD/yui-manual/assets/22786124/5777b601-e2d3-42b4-90c9-cba4e6937870)
+
+**12.自動化する**  
+⚠️Power Automateを利用するためのライセンスが必要となりますのでご注意ください。
+
+タブ「自動化」＞新しいスクリプト＞コードエディタに下記のコードを貼り付ける。
+<pre>
+<code>
+<font size="2">
+    ```javascript {iscopy=true}
+    function main(workbook: ExcelScript.Workbook) {
+      // すべて更新
+      workbook.refreshAllDataConnections();
+    }
+    ```
+</font>
+</code>
+</pre>
+
+![image](https://github.com/Heart-Computer-Co-LTD/yui-manual/assets/22786124/a60563ce-6e33-4540-998e-0d1fe1a0f66e)
+タスクの自動化＞Excelで実行するOffice Scriptをスケジュールする。
+![image](https://github.com/Heart-Computer-Co-LTD/yui-manual/assets/22786124/9bf6aacb-7a68-4f01-801d-88fcfc691547)
+PowreAutomate＞続行
+![image](https://github.com/Heart-Computer-Co-LTD/yui-manual/assets/22786124/df9a88b0-232e-4199-bcbb-489fe8e6f001)
+Reccurrecnce＞間隔と頻度を設定する。
+RunScript＞スクリプトで先ほど作成したスクリプトを選択する。
+![image](https://github.com/Heart-Computer-Co-LTD/yui-manual/assets/22786124/3f71af19-3578-4fd8-a603-648f0a84b0b8)
+
+
+
+### まとめ
+WebAPIは、異なるソフトウェア間で情報を交換し、機能を利用するためのインターフェースであり、HTTPプロトコルを通じてWebサービスやリソースへのアクセスを可能にします。  
+一方、ExcelOnlineは、クラウドベースのスプレッドシートツールであり、インターネットがあればどこからでもアクセスできるという特徴を持っています。これら二つを組み合わせることで、プログラミングの知識がなくても、APIから直接データを取り込み、処理することができるようになります。これにより、データ駆動型の意思決定を支援し、ビジネスの効率化を促進します。
+
+### 参考資料
+ - [酉-SUBARU Web APIの公式ドキュメント](https://apidog.com/apidoc/project-391823)
+ - [Power Automate 価格](https://powerautomate.microsoft.com/ja-jp/pricing/)
+
+### ご意見ご感想
+皆様がこの情報をお読みいただき、時間を割いてくださったことに心から感謝申し上げます。私たちは、提供する内容が皆様の期待に応え、有益な情報源となることを目指しています。もし可能であれば、皆様の率直なご意見や感想をお聞かせください。皆様からの一つ一つのフィードバックが、私たちのサービスをより良くするための貴重な指標となります。ご協力いただけますと幸いです。今後ともどうぞ宜しくお願い致します。  
+[入力フォームへ](https://forms.gle/ttDwePLjNYXc5e3u9)
