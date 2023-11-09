@@ -100,16 +100,23 @@ declare module 'astro:content' {
   collection: "blog",
   data: InferEntrySchema<"blog">
 } & { render(): Render[".mdx"] },
-"2023−11−08-GoogleSheetsとWebAPIの連携によるデータ活用.mdx": {
-  id: "2023−11−08-GoogleSheetsとWebAPIの連携によるデータ活用.mdx",
-  slug: "20231108-googlesheetsとwebapiの連携によるデータ活用",
+"2023-11-08-02-ExcelとWebAPIの連携によるデータ活用.mdx": {
+  id: "2023-11-08-02-ExcelとWebAPIの連携によるデータ活用.mdx",
+  slug: "2023-11-08-02-excelとwebapiの連携によるデータ活用",
   body: string,
   collection: "blog",
   data: InferEntrySchema<"blog">
 } & { render(): Render[".mdx"] },
-"2023−11−08−02-ExcelとWebAPIの連携によるデータ活用.mdx": {
-  id: "2023−11−08−02-ExcelとWebAPIの連携によるデータ活用.mdx",
-  slug: "2023110802-excelとwebapiの連携によるデータ活用",
+"2023-11-08-GoogleSheetsとWebAPIの連携によるデータ活用.mdx": {
+  id: "2023-11-08-GoogleSheetsとWebAPIの連携によるデータ活用.mdx",
+  slug: "2023-11-08-googlesheetsとwebapiの連携によるデータ活用",
+  body: string,
+  collection: "blog",
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".mdx"] },
+"2023-11-09-五合クラウドの概要と機能構成図.mdx": {
+  id: "2023-11-09-五合クラウドの概要と機能構成図.mdx",
+  slug: "2023-11-09-五合クラウドの概要と機能構成図",
   body: string,
   collection: "blog",
   data: InferEntrySchema<"blog">
