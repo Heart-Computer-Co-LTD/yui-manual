@@ -1,0 +1,93 @@
+---
+title: ライセンスについて
+description: 同時接続数ライセンスについて説明します。
+author: ハートコンピューター企画販売部
+publishDate: 2023-01-01T00:00:00.000Z
+coverSVG: ../images/svg/undraw/lisenceImage.jpeg
+socialImage: ../images/svg/undraw/lisenceImage.jpeg
+categories:
+  - ライセンス
+tags:
+  - ライセンス
+---
+## ライセンスの考え方
+ライセンスは、同時に利用する人数分のライセンスをご契約いただきます。  
+- 例えば、３ライセンスの場合は、３人が同時に利用できます。  
+- 1人がタブレットや自宅用PCなど複数台の端末から同時に接続しても、消費されるライセンス数は１つとなります。
+
+
+### 例）契約しているライセンス数が１つの場合
+- アカウントAとアカウントBは同時に利用できません。
+- 後からログインしたアカウントBは、自動ログアウトされます。
+- アカウントAは利用し続けることができます。
+
+```mermaid
+    C4Container
+    title 酉-SUBARUのライセンス（同時接続ライセンスについて）
+    Person(customerA, アカウントA, "担当者A", $tags="v1.0")
+    Person(customerB, アカウントB, "担当者B")
+
+    Container_Boundary(c1, "酉-SUBARU") {
+        Container(subaru, "五合クラウド", "ライセンス数：１", "ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー")
+    }
+
+    UpdateRelStyle(customerA, web_app, $offsetY="60", $offsetX="90")
+    Rel(customerA, subaru, "Uses", "HTTPS")
+    UpdateRelStyle(customerA, subaru, $offsetY="-40")
+
+    UpdateRelStyle(customerB, web_app, $offsetY="60", $offsetX="90")
+    Rel(customerB, subaru, "接続不可", "",$textColor="red", $lineColor="red", $offsetX="-50", $offsetY="20")
+    UpdateRelStyle(customerB, subaru, $offsetY="-40")
+        
+    UpdateElementStyle(customerB, $fontColor="red", $bgColor="grey", $borderColor="red")
+
+```
+- 先にアカウントBがログインしていた場合、後からログインしたアカウントAは自動ログアウトされます。
+- アカウントBは利用し続けることができます。
+
+```mermaid
+    C4Container
+    title 酉-SUBARUのライセンス（同時接続ライセンスについて）
+    Person(customerA, アカウントA, "担当者A", $tags="v1.0")
+    Person(customerB, アカウントB, "担当者B")
+
+    Container_Boundary(c1, "酉-SUBARU") {
+        Container(subaru, "五合クラウド", "ライセンス数：１", "ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー")
+    }
+
+    UpdateRelStyle(customerA, web_app, $offsetY="60", $offsetX="90")
+    Rel(customerA, subaru, "接続不可", "",$textColor="red", $lineColor="red", $offsetX="-50", $offsetY="20")
+    UpdateRelStyle(customerA, subaru, $offsetY="-40")
+    UpdateElementStyle(customerA, $fontColor="red", $bgColor="grey", $borderColor="red")
+
+
+    UpdateRelStyle(customerB, web_app, $offsetY="60", $offsetX="90")
+    Rel(customerB, subaru, "Uses", "HTTPS")
+    UpdateRelStyle(customerB, subaru, $offsetY="-40")
+       
+
+```
+
+
+### 例）契約しているライセンス数が２つの場合
+- アカウントAとアカウントBは同時に利用できます。
+
+```mermaid
+    C4Container
+    title 酉-SUBARUのライセンス（同時接続ライセンスについて）
+    Person(customerA, アカウントA, "担当者A", $tags="v1.0")
+    Person(customerB, アカウントB, "担当者B")
+
+    Container_Boundary(c1, "酉-SUBARU") {
+        Container(subaru, "五合クラウド", "ライセンス数：２", "ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー")
+    }
+
+    UpdateRelStyle(customerA, web_app, $offsetY="60", $offsetX="90")
+    Rel(customerA, subaru, "Uses", "HTTPS")
+    UpdateRelStyle(customerA, subaru, $offsetY="-40")
+
+    UpdateRelStyle(customerB, web_app, $offsetY="60", $offsetX="90")
+    Rel(customerB, subaru, "", "", $offsetX="-50", $offsetY="20")
+    UpdateRelStyle(customerB, subaru, $offsetY="-40")
+
+```

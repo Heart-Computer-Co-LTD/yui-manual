@@ -114,6 +114,13 @@ declare module 'astro:content' {
   collection: "blog",
   data: InferEntrySchema<"blog">
 } & { render(): Render[".mdx"] },
+"2023-11-09-02-ライセンスについて.mdx": {
+  id: "2023-11-09-02-ライセンスについて.mdx",
+  slug: "2023-11-09-02-ライセンスについて",
+  body: string,
+  collection: "blog",
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".mdx"] },
 "2023-11-09-五合クラウドの概要と機能構成図.mdx": {
   id: "2023-11-09-五合クラウドの概要と機能構成図.mdx",
   slug: "2023-11-09-五合クラウドの概要と機能構成図",
