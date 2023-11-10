@@ -11,7 +11,7 @@ export interface TagType {
 
 export const SiteMetadata = {
   title: '酉-SUBARU',
-  description: 'An Astro starter for corporate/marketing/blog websites.',
+  description: '酒税管理システム',
   author: {
     name: 'Chris Tham',
     twitter: '@chris1tham',
@@ -29,44 +29,8 @@ export const SiteMetadata = {
   },
   location: 'Rivendell, Middle Earth',
   latlng: [-33.86785, 151.20732] as [number, number],
-  repository: 'https://github.com/hellotham/hello-astro',
-  social: [
-    {
-      name: 'Email',
-      link: 'mailto:info@hellothamcom',
-      icon: 'envelope',
-    },
-    {
-      name: 'Phone',
-      link: '555-5555',
-      icon: 'telephone',
-    },
-    {
-      name: 'LinkedIn',
-      link: 'https://www.linkedin.com/hellothamcom',
-      icon: 'linkedin',
-    },
-    {
-      name: 'Facebook',
-      link: 'https://www.facebook.com/hellothamcom',
-      icon: 'facebook',
-    },
-    {
-      name: 'Instagram',
-      link: 'https://www.instagram.com/hellothamcom',
-      icon: 'instagram',
-    },
-    {
-      name: 'Twitter',
-      link: 'https://twitter.com/hellothamcom',
-      icon: 'twitter',
-    },
-    {
-      name: 'Github',
-      link: 'https://github.com/hellothamcom',
-      icon: 'github',
-    },
-  ],
+  repository: '',
+  social: [],
   buildTime: new Date(),
 }
 
@@ -78,12 +42,12 @@ export const DefaultImage = '../images/undraw/undraw_my_feed.png'
 
 export const NavigationLinks = [
   { name: 'はじめに', href: '' },
-  { name: '業務情報', href: 'blog' },
   { name: '価格', href: 'price' },
-  { name: 'APIs', href: 'apis' },
+  { name: '業務情報', href: 'blog' },
   { name: '製品サポート', href: 'doc/page-0' },
+  { name: 'APIs', href: 'apis' },
   { name: 'お問合わせ', href: 'contact' },
-]
+  { name: 'FAQ', href: 'faq' },]
 
 export const CategoryDetail = [
   {

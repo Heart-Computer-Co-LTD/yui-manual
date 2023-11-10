@@ -1,0 +1,136 @@
+---
+import Base from "../layouts/base.astro";
+import PageHero from "../components/pagehero.astro";
+import { SiteMetadata } from "../config";
+
+const frontmatter = {
+  title: "FAQ",
+  description: "よくあるご質問",
+  coverSVG: "../images/svg/undraw/undraw_contact_us.svg",
+  socialImage: "../images/undraw/undraw_contact_us.png",
+  publishDate: SiteMetadata.buildTime,
+};
+---
+
+<Base frontmatter={frontmatter}>
+  <body>
+    <main>
+      <div x-data="{ isLoading: false }" class="bg-white py-24 sm:py-32">
+        <div class="mx-auto max-w-7xl px-6 lg:px-8">
+          <div class="lg:text-center">
+            <h2
+              class="text-base text-purple-800 dark:text-purple-300 font-semibold tracking-wide uppercase"
+            >
+              FAQ
+            </h2>
+            <p
+              class="mt-2 text-2xl leading-8 font-extrabold tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl"
+            >
+              よくあるご質問
+            </p>
+            <p
+              class="mt-4 max-w-2xl text-xl text-gray-600 dark:text-gray-300 lg:mx-auto"
+            >
+              機能やサービス・契約についてなどよくある質問を確認できます。
+            </p>
+          </div>
+          <div
+            class="mx-auto mt-16 max-w-2xl rounded-3xl ring-1 ring-gray-200 sm:mt-20 lg:mx-0 lg:flex lg:max-w-none"
+          >
+            <div class="p-8 sm:p-10 lg:flex-auto">
+              <div x-data="faqData()" class="p-6">
+                <ul class="space-y-4">
+                  <template x-for="item in items" :key="item.id">
+                    <li class="bg-white rounded-lg shadow-md overflow-hidden">
+                      <button
+                        @click="item.open = !item.open"
+                        class="w-full text-left px-4 py-2 hover:bg-gray-300 focus:outline-none focus:bg-gray-100"
+                        :class="{ 'rounded-b-none': item.open }"
+                        x-text="item.title"
+                      >
+                      </button>
+                      <div
+                        x-show="item.open"
+                        x-text="item.detail"
+                        class="p-4 border-t"
+                        x-transition:enter="transition ease-out duration-300"
+                        x-transition:enter-start="opacity-0 transform scale-95"
+                        x-transition:enter-end="opacity-100 transform scale-100"
+                        x-transition:leave="transition ease-in duration-300"
+                        x-transition:leave-start="opacity-100 transform scale-100"
+                        x-transition:leave-end="opacity-0 transform scale-95"
+                      >
+                      </div>
+                    </li>
+                  </template>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script>
+      declare global {
+        interface Window {
+          faqData: () => {
+            items: {
+              id: number;
+              title: string;
+              detail: string;
+              open: boolean;
+            }[];
+          };
+        }
+      }
+      window.faqData = () => {
+        return {
+          items: [
+            {
+              id: 1,
+              title: "Q1: このシステムを導入するにはどのような要件がありますか？",
+              detail: "このシステムを使用するためには、インターネット接続が必要です。最適なパフォーマンスのために、最新のウェブブラウザを使用してください。特定のシステム要件については、製品サポートページを参照してください。",
+              open: false,
+            },
+            {
+              id: 2,
+              title: "Q2: ユーザー登録はどのように行いますか？",
+              detail: "利用お申し込みでいただいた情報をもとに、初期ユーザーを当社にてご用意します。利用環境が構築出来次第、ログイン情報をご登録いただいたメールアドレスに送付します。ユーザー（担当者）の追加は、利用者様にて自由に追加できます。",
+              open: false,
+            },
+            {
+              id: 3,
+              title: "Q4: セキュリティ対策はどのようになっていますか？",
+              detail: "A4: 私たちはデータの安全性を最優先に考えており、最新の暗号化技術を使用し、定期的にセキュリティ監査を行っています。",
+              open: false,
+            },
+            {
+              id: 4,
+              title: "Q5: システムのアップデートはどのように行われますか？",
+              detail: "A5: 当社のシステムはクラウドベースであるため、アップデートは自動的に行われます。ユーザーが特別な作業を行う必要はありません。",
+              open: false,
+            },
+            {
+              id: 5,
+              title: "Q6: サポート体制はどのようになっていますか？",
+              detail: "Webフォーム「お問い合わせ」からお問い合わせください。サポート対応時間は、平日の営業時間（9:00-12:00 / 13:00-17:00）での受け付けとなります。",
+              open: false,
+            },
+            {
+              id: 6,
+              title: "Q7: データバックアップはどのように行われますか？",
+              detail: "A7: すべてのデータはクラウド上で自動的にバックアップされ、緊急時には即座に復元可能です。データの復旧をご希望の際は、Webフォーム「お問い合わせ」からお問い合わせください。",
+              open: false,
+            },
+            {
+              id: 7,
+              title: "Q8: カスタマイズは可能ですか？",
+              detail: "A8: カスタマイズはできませんが、機能改善提案や新機能のリクエストを行うことができます。こちらのフォームからご投稿ください。https://docs.google.com/forms/d/e/1FAIpQLSeTm7PPi1YmWbTrpHdGzSZPYhslN842kcTECJnT_hKIRAaOUQ/viewform",
+              open: false,
+            },
+          ],
+        };
+      };
+    </script>
+  </body>
+</Base>
