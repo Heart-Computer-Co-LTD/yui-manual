@@ -1,0 +1,26 @@
+---
+section: 製品サポート
+title: 組織階層
+description: Lorem ipsum dolor sit amet - 3
+---
+
+
+```plantuml
+@startuml
+
+together {
+  class 製造場 {
+    A酒造
+  }
+  class 蔵置場 {
+    A酒造
+  }
+  class Together3
+}
+製造場- Together2
+Together2 - Together3
+
+
+@enduml
+
+```

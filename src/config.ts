@@ -115,6 +115,7 @@ export const SIDEBAR: Sidebar = {
   '製品サポート': [
     { text: '用語の定義', link: 'doc/page-1' },
     { text: '機能一覧', link: 'doc/page-2' },
+    { text: '帳票サンプル', link: 'doc/page-7-reportsample' },
     { text: '基本操作（共通）', link: 'doc/page-3' },
     { text: '基本操作（マスタメンテ）', link: 'doc/page-4-master'},
     { text: '基本操作（入力画面）', link: 'doc/page-5-input' },
