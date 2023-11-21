@@ -229,7 +229,10 @@ const frontmatter = {
           <dl class="divide-y divide-gray-100">
             <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
               <dt class="text-sm font-medium leading-6 text-gray-900">
-                酒税 安心サポート（電話・Webフォーム）
+                <div class="font-medium leading-6">酒税 安心サポート</div>
+                <div class="text-xs leading-1">
+                  （電話・Webフォーム）
+                </div>
               </dt>
               <dd class="mt-1 text-base leading-6 sm:col-span-2 sm:mt-0 text-center">
                 <div x-data="{ tank: 3000, nebiki: 0 }">
@@ -242,6 +245,49 @@ const frontmatter = {
                   ></span>
                 円（税抜）
                 </div>
+              </dd>
+            </div>
+            <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+              <dt class="text-sm font-medium leading-6 text-gray-900">
+                <div class="font-medium leading-6">酒税 安心サポートアルファ</div>
+                <div class="text-xs leading-1">
+                  （電話・Webフォーム・リモート接続）
+                </div>
+              </dt>
+              <dd class="mt-1 text-base leading-6 sm:col-span-2 sm:mt-0 text-center">
+                <div x-data="{ tank: 5000, nebiki: 0 }">
+                <span 
+                  x-text="on? '年額' : '月額'"
+                  ></span
+                >
+                <span 
+                  x-text="on? ((tank*12)-nebiki).toLocaleString() : (tank).toLocaleString()"
+                  ></span>
+                円（税抜）
+                </div>
+              </dd>
+            </div>
+            <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+              <dt class="text-sm font-medium leading-6 text-gray-900">
+                <div class="font-medium leading-6">導入支援サービス</div>
+                <div class="text-xs leading-1">
+                  （専任スタッフによる現地訪問・電話・メールサポート）
+                </div>
+              </dt>
+              <dd class="mt-1 text-base leading-6 sm:col-span-2 sm:mt-0 text-center">
+                <div x-data="{ tank: 45000, nebiki: 0 }">
+                <span 
+                  x-text="on? '1日当たり' : '1日当たり'"
+                  ></span
+                >
+                <span 
+                  x-text="on? ((tank)-nebiki).toLocaleString() : (tank).toLocaleString()"
+                  ></span>
+                円（税抜）
+                <div class="text-xs leading-1">
+                  ※別途お見積もり
+                </div>
+              </div>
               </dd>
             </div>
             <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
