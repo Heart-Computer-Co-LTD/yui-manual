@@ -122,5 +122,8 @@ export const SIDEBAR: Sidebar = {
     { text: '受注入力', link: 'doc/page-0030' },
     { text: '商品マスタ', link: 'doc/page-1060' },
   ],
+  '契約・支払': [
+    { text: '決済タイミング', link: 'doc/page-payment-01' },
+  ],
 
 }
