@@ -207,6 +207,13 @@ declare module 'astro:content' {
   collection: "doc",
   data: InferEntrySchema<"doc">
 } & { render(): Render[".md"] },
+"page-payment-02.md": {
+  id: "page-payment-02.md",
+  slug: "page-payment-02",
+  body: string,
+  collection: "doc",
+  data: InferEntrySchema<"doc">
+} & { render(): Render[".md"] },
 },
 
 	};
