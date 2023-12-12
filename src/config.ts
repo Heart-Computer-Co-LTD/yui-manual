@@ -119,9 +119,10 @@ export const SIDEBAR: Sidebar = {
     { text: '基本操作（共通）', link: 'doc/page-3' },
     { text: '基本操作（マスタメンテ）', link: 'doc/page-4-master'},
     { text: '基本操作（入力画面）', link: 'doc/page-5-input' },
+    { text: '基本操作（マスタ移行）', link: 'doc/page-1920' },
     { text: '受注入力', link: 'doc/page-0030' },
     { text: '商品マスタ', link: 'doc/page-1060' },
-    { text: '商品マスタ移行', link: 'doc/page-1920' },
+
   ],
   '契約・支払': [
     { text: '決済タイミング', link: 'doc/page-payment-01' },
