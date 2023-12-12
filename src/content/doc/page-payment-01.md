@@ -14,9 +14,9 @@ description: Lorem ipsum dolor sit amet - 4
  - 契約した月の翌月初めに、前月利用分の請求書を発行します。
  - 請求書発行後、当月以内にお支払いください。
 
-![ライセンス管理-決済期間_月払](../../../src/content/doc/images/monthPayment.png)
+![ライセンス管理-決済期間_月払](https://storageaccountdaiwa9829.blob.core.windows.net/manual/monthPayment.png)
 
 ### 決済のタイミングについて（一括払いの場合）
  - 契約した月の翌月月初に、１年間利用分の請求書を発行します。
  - 請求書発行後、当月以内にお支払いください。
-![ライセンス管理-決済期間_年払](../../../src/content/doc/images/yearlyPayment.png)
+![ライセンス管理-決済期間_年払](https://storageaccountdaiwa9829.blob.core.windows.net/manual/yearlyPayment.png)
