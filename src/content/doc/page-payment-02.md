@@ -1,6 +1,6 @@
 ---
 section: 契約・支払
-title: 決済タイミング（プラン変更）
+title: 決済タイミング（オプション追加）
 description: Lorem ipsum dolor sit amet - 4
 ---
 ### 契約期間中のオプションおよびライセンス追加について（月々払いの場合）
