@@ -128,13 +128,13 @@ declare module 'astro:content' {
   collection: "blog",
   data: InferEntrySchema<"blog">
 } & { render(): Render[".mdx"] },
-"2023-12-27-倉庫の設定その1.md": {
-  id: "2023-12-27-倉庫の設定その1.md",
+"2023-12-27-倉庫の設定その1.mdx": {
+  id: "2023-12-27-倉庫の設定その1.mdx",
   slug: "2023-12-27-倉庫の設定その1",
   body: string,
   collection: "blog",
   data: InferEntrySchema<"blog">
-} & { render(): Render[".md"] },
+} & { render(): Render[".mdx"] },
 },
 "doc": {
 "page-0.md": {
