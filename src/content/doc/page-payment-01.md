@@ -11,8 +11,8 @@ description: Lorem ipsum dolor sit amet - 4
  - 契約終了日の30日前までに通知がない場合、契約が自動更新されます（1年）
 
 ### 支払のタイミングについて（月々払いの場合）
- - 契約した月の翌月初めに、前月利用分の請求書を発行します。
- - 請求書発行後、当月以内にお支払いください。
+ - 契約した月の翌月末に、当月利用分の請求書を発行します。
+ - 請求書発行後、翌月以内にお支払いください。
 
 ![ライセンス管理-決済期間_月払2](https://storageaccountdaiwa9829.blob.core.windows.net/manual/monthPayment.png)
 
