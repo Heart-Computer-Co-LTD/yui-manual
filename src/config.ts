@@ -36,7 +36,7 @@ export const SiteMetadata = {
 
 export const Logo = '../images/svg/astro/logomark-light.png'
 export const LogoImage = '../images/astro/full-logo-light.png'
-export const FeaturedSVG = '../images/svg/undraw/undraw_design_inspiration.svg'
+export const FeaturedSVG = '../images/svg/undraw/topimage.png'
 export const DefaultSVG = '../images/svg/undraw/undraw_my_feed.svg'
 export const DefaultImage = '../images/undraw/undraw_my_feed.png'
 
