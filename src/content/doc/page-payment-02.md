@@ -9,6 +9,6 @@ description: Lorem ipsum dolor sit amet - 4
  - オプションをご契約の場合は、基本料金にオプション利用料が加算されます。
 ![ライセンス管理-決済期間_オプション追加 drawio](https://storageaccountdaiwa9829.blob.core.windows.net/manual/monthlyOptionPayment.png)
 
-### 決済のタイミングについて（一括払いの場合）
+### 契約期間中のオプションおよびライセンス追加について（一括払いの場合）
  - オプションおよびライセンス追加申込した翌月の月末に、基本プラン契約更新日までを月割り計算した利用分の請求書を発行します。
 ![ライセンス管理-決済期間_プラン変更年間 drawio](https://storageaccountdaiwa9829.blob.core.windows.net/manual/yearlyOptionPayment.png)

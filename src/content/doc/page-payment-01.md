@@ -10,13 +10,13 @@ description: Lorem ipsum dolor sit amet - 4
  - 無料期間を除く契約期間中の解約はできません。
  - 契約終了日の30日前までに通知がない場合、契約が自動更新されます（1年）
 
-### 決済のタイミングについて（月々払いの場合）
+### 支払のタイミングについて（月々払いの場合）
  - 契約した月の翌月初めに、前月利用分の請求書を発行します。
  - 請求書発行後、当月以内にお支払いください。
 
-![ライセンス管理-決済期間_月払](https://storageaccountdaiwa9829.blob.core.windows.net/manual/monthPayment.png)
+![ライセンス管理-決済期間_月払2](https://storageaccountdaiwa9829.blob.core.windows.net/manual/monthPayment.png)
 
-### 決済のタイミングについて（一括払いの場合）
+### 支払のタイミングについて（一括払いの場合）
  - 契約した月の翌月月末に、１年間利用分の請求書を発行します。
  - 請求書発行後、翌月以内にお支払いください。
 ![ライセンス管理-決済期間_年払](https://storageaccountdaiwa9829.blob.core.windows.net/manual/yearlyPayment.png)
