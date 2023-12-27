@@ -20,5 +20,3 @@ description: Lorem ipsum dolor sit amet - 4
  - 契約した月の翌月月末に、１年間利用分の請求書を発行します。
  - 請求書発行後、翌月以内にお支払いください。
 ![ライセンス管理-決済期間_年払](https://storageaccountdaiwa9829.blob.core.windows.net/manual/yearlyPayment.png)
-
-
