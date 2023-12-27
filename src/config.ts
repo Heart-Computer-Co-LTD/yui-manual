@@ -125,8 +125,8 @@ export const SIDEBAR: Sidebar = {
 
   ],
   '契約・支払': [
-    { text: '決済タイミング', link: 'doc/page-payment-01' },
-    { text: '決済タイミング（オプション追加）', link: 'doc/page-payment-02' },
+    { text: '支払タイミング', link: 'doc/page-payment-01' },
+    { text: '支払タイミング（オプション追加）', link: 'doc/page-payment-02' },
   ],
 
 }
