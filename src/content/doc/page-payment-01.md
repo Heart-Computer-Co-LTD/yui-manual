@@ -12,7 +12,7 @@ description: Lorem ipsum dolor sit amet - 4
 
 ### 支払のタイミングについて（月々払いの場合）
  - 契約した月の翌月末に、当月利用分の請求書を発行します。
- - 請求書発行後、翌月末にお支払いください。
+ - 請求書発行後、翌月末までにお支払いください。
 
 ![ライセンス管理-決済期間_月払2](https://storageaccountdaiwa9829.blob.core.windows.net/manual/monthPayment.png)
 
