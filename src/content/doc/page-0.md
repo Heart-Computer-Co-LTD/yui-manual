@@ -17,5 +17,6 @@ description: Lorem ipsum dolor sit amet - 4
 
 - アドレスバーに ``edge://settings/fonts``を貼り付ける。
 - 最小フォントサイズを下限値にする。
+- aaa
 
 ![image](https://user-images.githubusercontent.com/22786124/212242049-685571db-b8fb-41bd-be8c-f4bc6c81a8fb.png)
