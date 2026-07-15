@@ -121,6 +121,7 @@ export const SIDEBAR: Sidebar = {
     { text: '基本操作（入力画面）', link: 'doc/page-5-input' },
     { text: '基本操作（マスタ移行）', link: 'doc/page-1920' },
     { text: '受注入力', link: 'doc/page-0030' },
+    { text: '入金入力', link: 'doc/page-0040' },
     { text: '商品マスタ', link: 'doc/page-1060' },
 
   ],
